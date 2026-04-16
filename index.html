@@ -711,12 +711,22 @@ function drawS0(){
   ctx.fillStyle='#F0F6FF';ctx.fillRect(0,0,can.width,can.height);
   ctx.fillStyle='#333';ctx.font='bold 14px Segoe UI';ctx.textAlign='left';ctx.textBaseline='top';
   ctx.fillText('Notation symbolique :',12,12);
-  const nx=116,ny=78;
+  const ny=78;
+  // Mesure des largeurs réelles pour centrer l'ensemble dans le canvas
+  ctx.font='bold 44px Times New Roman';
+  const symW=ctx.measureText(sym).width;
+  ctx.font='bold 21px Times New Roman';
+  const numW=Math.max(ctx.measureText(A+'').width, ctx.measureText(Z+'').width);
+  const gap=8;
+  const totalW=numW+gap+symW;
+  const startX=(can.width-totalW)/2;
+  const numRightX=startX+numW;
+  const symCX=numRightX+gap+symW/2;
   ctx.font='bold 44px Times New Roman';ctx.fillStyle='#C00000';ctx.textAlign='center';ctx.textBaseline='middle';
-  ctx.fillText(sym,nx+36,ny+2);
+  ctx.fillText(sym,symCX,ny+2);
   ctx.font='bold 21px Times New Roman';ctx.fillStyle='#111';ctx.textAlign='right';
-  ctx.fillText(A+'',nx+4,ny-12);
-  ctx.fillText(Z+'',nx+4,ny+16);
+  ctx.fillText(A+'',numRightX,ny-12);
+  ctx.fillText(Z+'',numRightX,ny+16);
   ctx.strokeStyle='#DDD';ctx.lineWidth=1;
   ctx.beginPath();ctx.moveTo(0,132);ctx.lineTo(can.width,132);ctx.stroke();
   ctx.fillStyle='#444';ctx.font='13px Segoe UI';ctx.textAlign='left';ctx.textBaseline='top';
