@@ -90,7 +90,7 @@ textarea:focus{outline:none;border-color:var(--bleu2);}
 .reponse-item{display:flex;align-items:center;gap:8px;font-size:13px;flex-wrap:wrap;}
 .reponse-item .tiret{color:var(--bleu2);font-weight:700;flex-shrink:0;}
 .reponse-item label{color:#444;white-space:nowrap;font-size:13px;}
-.reponse-item input[type=text]{border:1.5px solid var(--orange);border-radius:5px;padding:4px 8px;font-size:13px;font-family:inherit;flex:1;min-width:60px;}
+.reponse-item input[type=text]{border:1.5px solid var(--gris2);border-radius:5px;padding:4px 8px;font-size:13px;font-family:inherit;flex:1;min-width:60px;}
 .reponse-item input[type=text]:focus{outline:none;border-color:var(--bleu2);}
 .reponse-item input[type=text].wide{flex:2;}
 .eq-check{background:#F9F9F9;border:2px solid var(--gris2);border-radius:8px;padding:12px 16px;margin:10px 0;}
@@ -180,10 +180,10 @@ input.trou.large{width:140px;}
 <div class="toolbox">
   <div class="toolbox-header" onclick="toggleToolbox()">🧰 Boîte à outils - Rappels essentiels <span id="toolbox-arrow">▼</span></div>
   <div class="toolbox-body" id="toolbox-body">
-    <div class="def-card"><h4>📌 Notation d'un noyau</h4><p>X = symbole de l'élément</p><div class="formula">\( {}^{A}_{Z}\text{X} \)</div><p style="margin-top:5px">A = nombre de masse (nucléons)<br>Z = numéro atomique (protons)<br>N = A − Z (neutrons)</p></div>
-    <div class="def-card"><h4>📌 Isotopes</h4><p>Même <strong>Z</strong> (même élément), <strong>A différent</strong>.</p><div class="formula">\( {}^{12}_{6}\text{C} \quad {}^{13}_{6}\text{C} \quad {}^{14}_{6}\text{C} \)</div></div>
+    <div class="def-card"><h4>📌 Notation d'un noyau</h4><p>\(X\) = symbole de l'élément</p><div class="formula">\( {}^{A}_{Z}\text{X} \)</div><p style="margin-top:5px">\(A\) = nombre de masse (nucléons)<br>\(Z\) = numéro atomique (protons)<br>\(N = A - Z\) (neutrons)</p></div>
+    <div class="def-card"><h4>📌 Isotopes</h4><p>Même \(Z\) (même élément), \(A\) différent.</p><div class="formula">\( {}^{12}_{6}\text{C} \quad {}^{13}_{6}\text{C} \quad {}^{14}_{6}\text{C} \)</div></div>
     <div class="def-card"><h4>📌 Lois de conservation</h4><p>Lors d'une réaction nucléaire :</p><div class="formula">\( \Sigma A = \text{cte} \quad \Sigma Z = \text{cte} \)</div></div>
-    <div class="def-card"><h4>📌 Types de transformations</h4><p><strong>Physique :</strong> même espèce chimique<br><strong>Chimique :</strong> Z inchangé<br><strong>Nucléaire :</strong> Z change → élément change</p></div>
+    <div class="def-card"><h4>📌 Types de transformations</h4><p><strong>Physique :</strong> même espèce chimique<br><strong>Chimique :</strong> \(Z\) inchangé<br><strong>Nucléaire :</strong> \(Z\) change \(\rightarrow\) élément change</p></div>
   </div>
 </div>
 
@@ -207,12 +207,12 @@ input.trou.large{width:140px;}
       <div class="retenir-title">📖 À retenir</div>
       <p>Le noyau est composé de <strong>protons</strong> (charge +) et de <strong>neutrons</strong> (neutres), appelés <strong>nucléons</strong>.</p>
       <ul style="margin-top:6px">
-        <li><strong>Numéro atomique Z</strong> = nombre de protons → détermine l'élément chimique</li>
-        <li><strong>Nombre de masse A</strong> = nombre total de nucléons (protons + neutrons)</li>
-        <li><strong>Nombre de neutrons N</strong> = A − Z</li>
+        <li><strong>Numéro atomique \(Z\)</strong> = nombre de protons \(\rightarrow\) détermine l'élément chimique</li>
+        <li><strong>Nombre de masse \(A\)</strong> = nombre total de nucléons (protons + neutrons)</li>
+        <li><strong>Nombre de neutrons \(N\)</strong> = \(A - Z\)</li>
       </ul>
       <div class="formula-block">\[ {}^{A}_{Z}\text{X} \quad \text{avec } A = Z + N \]</div>
-      <p>Exemple : \( {}^{12}_{6}\text{C} \) → Z = 6 protons, A = 12, N = A - Z = 12 − 6 = 6 neutrons.</p>
+      <p>Exemple : \( {}^{12}_{6}\text{C} \) \(\rightarrow\) \(Z = 6\) protons, \(A = 12\), \(N = A - Z = 12 - 6 = 6\) neutrons.</p>
     </div>
     <div class="canvas-zone">
       <canvas id="c0" width="400" height="310"></canvas>
@@ -228,7 +228,7 @@ input.trou.large{width:140px;}
     <div class="questions">
       <div class="q-title">📋 Questions</div>
       <div class="question">
-        <p><span class="code code-app">APP</span><b>Q1.</b> Règle les curseurs sur Z = 6, N = 6 (carbone-12). Lis la notation affichée et complète :</p>
+        <p><span class="code code-app">APP</span><b>Q1.</b> Règle les curseurs sur \(Z = 6\), \(N = 6\) (carbone-12). Lis la notation affichée et complète :</p>
         <div class="reponse-list">
           <div class="reponse-item"><span class="tiret">-</span><label>Z =</label><input type="text" id="r0_0" placeholder="Réponse..."></div>
           <div class="reponse-item"><span class="tiret">-</span><label>A =</label><input type="text" id="r0_1" placeholder="Réponse..."></div>
@@ -236,11 +236,11 @@ input.trou.large{width:140px;}
         </div>
       </div>
       <div class="question">
-        <p><span class="code code-app">APP</span><b>Q2.</b> Règle les curseurs pour obtenir un noyau d'oxygène-16 (Z = 8, A = 16). Combien de neutrons ce noyau contient-il ?</p>
+        <p><span class="code code-app">APP</span><b>Q2.</b> Règle les curseurs pour obtenir un noyau d'oxygène-16 (\(Z = 8\), \(A = 16\)). Combien de neutrons ce noyau contient-il ?</p>
         <textarea id="ta0" placeholder="Réponse..."></textarea>
       </div>
       <div class="question">
-        <p><span class="code code-rea">REA</span><b>Q3.</b> Un noyau possède 11 protons et 12 neutrons. Complète :</p>
+        <p><span class="code code-rea">REA</span><b>Q3.</b> Un noyau possède \(11\) protons et \(12\) neutrons. Complète :</p>
         <div class="reponse-list">
           <div class="reponse-item"><span class="tiret">-</span><label>Z =</label><input type="text" id="r0_3" placeholder="Réponse..."></div>
           <div class="reponse-item"><span class="tiret">-</span><label>A =</label><input type="text" id="r0_4" placeholder="Réponse..."></div>
@@ -248,7 +248,7 @@ input.trou.large{width:140px;}
         </div>
       </div>
       <div class="question">
-        <p><span class="code code-val">VAL</span><b>Q4.</b> Un noyau a Z = 6 et A = 14. À quel élément appartient-il ? Justifie.</p>
+        <p><span class="code code-val">VAL</span><b>Q4.</b> Un noyau a \(Z = 6\) et \(A = 14\). À quel élément appartient-il ? Justifie.</p>
         <textarea id="ta1" placeholder="Réponse..."></textarea>
       </div>
     </div>
@@ -264,8 +264,8 @@ input.trou.large{width:140px;}
     </div></div>
     <div class="retenir">
       <div class="retenir-title">📖 À retenir</div>
-      <p>Deux atomes sont <strong>isotopes</strong> s'ils ont le <strong>même Z</strong> (même élément chimique) mais un <strong>A différent</strong> (nombre de neutrons différent). Ils ont les mêmes propriétés chimiques mais des masses différentes.</p>
-      <div class="formula-block">\( {}^{12}_{6}\text{C} \quad {}^{13}_{6}\text{C} \quad {}^{14}_{6}\text{C} \) - trois isotopes du carbone (Z = 6)</div>
+      <p>Deux atomes sont <strong>isotopes</strong> s'ils ont le même \(Z\) (même élément chimique) mais un \(A\) différent (nombre de neutrons différent). Ils ont les mêmes propriétés chimiques mais des masses différentes.</p>
+      <div class="formula-block">\( {}^{12}_{6}\text{C} \quad {}^{13}_{6}\text{C} \quad {}^{14}_{6}\text{C} \) - trois isotopes du carbone (\(Z = 6\))</div>
     </div>
     <div class="canvas-zone"><canvas id="c1" width="520" height="260"></canvas></div>
     <div class="questions">
@@ -288,7 +288,7 @@ input.trou.large{width:140px;}
         <textarea id="ta3" placeholder="Réponse..."></textarea>
       </div>
       <div class="question">
-        <p><span class="code code-val">VAL</span><b>Q4.</b> Un isotope du sodium a A = 23, Z = 11. Un autre a A = 22, Z = 11. Mêmes propriétés chimiques ? Pourquoi ?</p>
+        <p><span class="code code-val">VAL</span><b>Q4.</b> Un isotope du sodium a \(A = 23\), \(Z = 11\). Un autre a \(A = 22\), \(Z = 11\). Mêmes propriétés chimiques ? Pourquoi ?</p>
         <textarea id="ta4" placeholder="Réponse..."></textarea>
       </div>
     </div>
@@ -318,20 +318,20 @@ input.trou.large{width:140px;}
       <div class="retenir-title">📖 À retenir - Types de radioactivité <span class="badge-bo">Au-delà du BO</span></div>
       <table>
         <tr><th>Type</th><th>Particule émise</th><th>Effet sur Z et A</th><th>Exemple</th></tr>
-        <tr><td>Radioactivité <strong>α</strong></td><td>\( {}^{4}_{2}\text{He} \)</td><td>Z − 2 ; A − 4</td><td>\( {}^{238}_{92}\text{U} \rightarrow {}^{234}_{90}\text{Th} + {}^{4}_{2}\text{He} \)</td></tr>
-        <tr><td>Radioactivité <strong>β⁻</strong></td><td>\( {}^{0}_{-1}\text{e} \)</td><td>Z + 1 ; A inchangé</td><td>\( {}^{14}_{6}\text{C} \rightarrow {}^{14}_{7}\text{N} + {}^{0}_{-1}\text{e} \)</td></tr>
-        <tr><td>Radioactivité <strong>β⁺</strong></td><td>\( {}^{0}_{+1}\text{e} \)</td><td>Z − 1 ; A inchangé</td><td>\( {}^{14}_{8}\text{O} \rightarrow {}^{14}_{7}\text{N} + {}^{0}_{+1}\text{e} \)</td></tr>
+        <tr><td>Radioactivité \(\alpha\)</td><td>\( {}^{4}_{2}\text{He} \)</td><td>\(Z - 2\) ; \(A - 4\)</td><td>\( {}^{238}_{92}\text{U} \rightarrow {}^{234}_{90}\text{Th} + {}^{4}_{2}\text{He} \)</td></tr>
+        <tr><td>Radioactivité \(\beta^-\)</td><td>\( {}^{0}_{-1}\text{e} \)</td><td>\(Z + 1\) ; \(A\) inchangé</td><td>\( {}^{14}_{6}\text{C} \rightarrow {}^{14}_{7}\text{N} + {}^{0}_{-1}\text{e} \)</td></tr>
+        <tr><td>Radioactivité \(\beta^+\)</td><td>\( {}^{0}_{+1}\text{e} \)</td><td>\(Z - 1\) ; \(A\) inchangé</td><td>\( {}^{14}_{8}\text{O} \rightarrow {}^{14}_{7}\text{N} + {}^{0}_{+1}\text{e} \)</td></tr>
       </table>
     </div>
     <div class="questions">
       <div class="q-title">📋 Questions</div>
       <div class="question">
-        <p><span class="code code-app">APP</span><b>Q1.</b> Dans la désintégration β⁻ du carbone-14 ci-dessous, quel est le noyau père ? Le noyau fils ? Quelle particule est émise ?</p>
+        <p><span class="code code-app">APP</span><b>Q1.</b> Dans la désintégration \(\beta^-\) du carbone-14 ci-dessous, quel est le noyau père ? Le noyau fils ? Quelle particule est émise ?</p>
         <div class="eq-check">
-          <div class="eq-check-title">Désintégration β⁻ - Carbone-14</div>
+          <div class="eq-check-title">Désintégration \(\beta^-\) - Carbone-14</div>
           <div class="eq-line">
             <div class="noyau-display">\( {}^{14}_{6}\text{C} \)</div>
-            <span style="font-size:20px">→</span>
+            <span style="font-size:20px">\(\rightarrow\)</span>
             <div class="noyau-display">\( {}^{14}_{7}\text{N} \)</div>
             <span style="font-size:20px">+</span>
             <div class="noyau-display">\( {}^{0}_{-1}\text{e} \)</div>
@@ -341,19 +341,19 @@ input.trou.large{width:140px;}
         <textarea id="ta5" placeholder="Réponse..."></textarea>
       </div>
       <div class="question">
-        <p><span class="code code-rea">REA</span><b>Q2.</b> Vérifie que A et Z sont conservés dans la désintégration β⁻ du carbone-14 :</p>
+        <p><span class="code code-rea">REA</span><b>Q2.</b> Vérifie que \(A\) et \(Z\) sont conservés dans la désintégration \(\beta^-\) du carbone-14 :</p>
         <div class="reponse-list">
           <div class="reponse-item"><span class="tiret">-</span><label>Conservation de A : avant =</label><input type="text" id="r3_0" placeholder="Réponse..."><label style="margin-left:4px">; après =</label><input type="text" id="r3_1" placeholder="Réponse..."><label style="margin-left:4px">=</label><input type="text" id="r3_2" placeholder="Réponse..."><label style="margin-left:4px">✓ ou ✗ ?</label><input type="text" id="r3_3" placeholder="Réponse..." style="max-width:40px"></div>
           <div class="reponse-item"><span class="tiret">-</span><label>Conservation de Z : avant =</label><input type="text" id="r3_4" placeholder="Réponse..."><label style="margin-left:4px">; après =</label><input type="text" id="r3_5" placeholder="Réponse..."><label style="margin-left:4px">=</label><input type="text" id="r3_6" placeholder="Réponse..."><label style="margin-left:4px">✓ ou ✗ ?</label><input type="text" id="r3_7" placeholder="Réponse..." style="max-width:40px"></div>
         </div>
       </div>
       <div class="question">
-        <p><span class="code code-rea">REA</span><b>Q3.</b> Vérifie que A et Z sont conservés dans la désintégration α du radium-226 :</p>
+        <p><span class="code code-rea">REA</span><b>Q3.</b> Vérifie que \(A\) et \(Z\) sont conservés dans la désintégration \(\alpha\) du radium-226 :</p>
         <div class="eq-check">
-          <div class="eq-check-title">Désintégration α - Radium-226</div>
+          <div class="eq-check-title">Désintégration \(\alpha\) - Radium-226</div>
           <div class="eq-line">
             <div class="noyau-display">\( {}^{226}_{88}\text{Ra} \)</div>
-            <span style="font-size:20px">→</span>
+            <span style="font-size:20px">\(\rightarrow\)</span>
             <div class="noyau-display">\( {}^{222}_{86}\text{Rn} \)</div>
             <span style="font-size:20px">+</span>
             <div class="noyau-display">\( {}^{4}_{2}\text{He} \)</div>
@@ -365,16 +365,16 @@ input.trou.large{width:140px;}
         </div>
       </div>
       <div class="question">
-        <p><span class="code code-val">VAL</span><b>Q4.</b> La désintégration du carbone-14 est-elle une transformation chimique ou nucléaire ? Comment le sais-tu ?</p>
+        <p><span class="code code-val">VAL</span><b>Q4.</b> La désintégration du carbone-\(14\) est-elle une transformation chimique ou nucléaire ? Comment le sais-tu ?</p>
         <textarea id="ta6" placeholder="Réponse..."></textarea>
       </div>
       <div class="question">
-        <p><span class="code code-rea">REA</span><b>Q5.</b> Vérifie que A et Z sont conservés dans la désintégration β⁺ de l'oxygène-14 :</p>
+        <p><span class="code code-rea">REA</span><b>Q5.</b> Vérifie que \(A\) et \(Z\) sont conservés dans la désintégration \(\beta^+\) de l'oxygène-14 :</p>
         <div class="eq-check">
-          <div class="eq-check-title">Désintégration β⁺ - Oxygène-14</div>
+          <div class="eq-check-title">Désintégration \(\beta^+\) - Oxygène-14</div>
           <div class="eq-line">
             <div class="noyau-display">\( {}^{14}_{8}\text{O} \)</div>
-            <span style="font-size:20px">→</span>
+            <span style="font-size:20px">\(\rightarrow\)</span>
             <div class="noyau-display">\( {}^{14}_{7}\text{N} \)</div>
             <span style="font-size:20px">+</span>
             <div class="noyau-display">\( {}^{0}_{+1}\text{e} \)</div>
@@ -404,7 +404,7 @@ input.trou.large{width:140px;}
       <table>
         <tr><th>Type</th><th>Ce qui change</th><th>Ce qui est conservé</th><th>Exemple</th></tr>
         <tr><td><strong>Physique</strong></td><td>État ou forme</td><td>L'espèce chimique</td><td>\( \text{H}_2\text{O}_{(\text{l})} \rightarrow \text{H}_2\text{O}_{(\text{g})} \)</td></tr>
-        <tr><td><strong>Chimique</strong></td><td>Liaisons entre atomes</td><td>Z de chaque atome</td><td>\( \text{C} + \text{O}_2 \rightarrow \text{CO}_2 \)</td></tr>
+        <tr><td><strong>Chimique</strong></td><td>Liaisons entre atomes</td><td>\(Z\) de chaque atome</td><td>\( \text{C} + \text{O}_2 \rightarrow \text{CO}_2 \)</td></tr>
         <tr><td><strong>Nucléaire</strong></td><td>Le noyau (Z change)</td><td>\( \Sigma A \) et \( \Sigma Z \) au total</td><td>\( {}^{14}_{6}\text{C} \rightarrow {}^{14}_{7}\text{N} + {}^{0}_{-1}\text{e} \)</td></tr>
       </table>
       <div class="attention-box" style="margin-top:8px"><strong>⚠️ Clé :</strong> lors d'une transformation nucléaire, les atomes <strong>changent d'identité chimique</strong> (Z varie), ce qui est impossible lors d'une transformation physique ou chimique.</div>
@@ -440,7 +440,7 @@ input.trou.large{width:140px;}
       <div class="question">
         <p><span class="code code-app">APP</span><b>Q1.</b> Classe chaque transformation (physique / chimique / nucléaire) et justifie :</p>
         <div class="reponse-list">
-          <div class="reponse-item"><span class="tiret">-</span><label>(a) Glace → eau liquide :</label><input type="text" id="r4_0" placeholder="Réponse..." class="wide"></div>
+          <div class="reponse-item"><span class="tiret">-</span><label>(a) Glace \(\rightarrow\) eau liquide :</label><input type="text" id="r4_0" placeholder="Réponse..." class="wide"></div>
           <div class="reponse-item"><span class="tiret">-</span><label>(b) \( \text{CH}_4 + 2\,\text{O}_2 \rightarrow \text{CO}_2 + 2\,\text{H}_2\text{O} \) :</label><input type="text" id="r4_1" placeholder="Réponse..." class="wide"></div>
           <div class="reponse-item"><span class="tiret">-</span><label>(c) \( {}^{238}_{92}\text{U} \rightarrow {}^{234}_{90}\text{Th} + {}^{4}_{2}\text{He} \) :</label><input type="text" id="r4_2" placeholder="Réponse..." class="wide"></div>
           <div class="reponse-item"><span class="tiret">-</span><label>(d) \( {}^{2}_{1}\text{H} + {}^{3}_{1}\text{H} \rightarrow {}^{4}_{2}\text{He} + {}^{1}_{0}\text{n} \) :</label><input type="text" id="r4_3" placeholder="Réponse..." class="wide"></div>
@@ -490,10 +490,10 @@ input.trou.large{width:140px;}
       <div class="qcm-item">
         <p><b>Q2.</b> Le nombre de neutrons N d'un noyau \( {}^{A}_{Z}\text{X} \) est :</p>
         <div class="choix-group" data-correct="2">
-          <button class="choix-btn" onclick="selectQCM(this)">N = A × Z</button>
-          <button class="choix-btn" onclick="selectQCM(this)">N = Z − A</button>
-          <button class="choix-btn" onclick="selectQCM(this)">N = A − Z</button>
-          <button class="choix-btn" onclick="selectQCM(this)">N = A + Z</button>
+          <button class="choix-btn" onclick="selectQCM(this)">\(N = A \times Z\)</button>
+          <button class="choix-btn" onclick="selectQCM(this)">\(N = Z - A\)</button>
+          <button class="choix-btn" onclick="selectQCM(this)">\(N = A - Z\)</button>
+          <button class="choix-btn" onclick="selectQCM(this)">\(N = A + Z\)</button>
         </div>
       </div>
       <div class="qcm-item">
@@ -529,7 +529,7 @@ input.trou.large{width:140px;}
           <button class="choix-btn" onclick="selectQCM(this)">La fission de l'uranium</button>
           <button class="choix-btn" onclick="selectQCM(this)">La combustion de l'hydrogène</button>
           <button class="choix-btn" onclick="selectQCM(this)">La fusion de noyaux d'hydrogène</button>
-          <button class="choix-btn" onclick="selectQCM(this)">La radioactivité β⁻</button>
+          <button class="choix-btn" onclick="selectQCM(this)">La radioactivité \(\beta^-\)</button>
         </div>
       </div>
     </div>
